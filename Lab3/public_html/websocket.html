@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+  <meta charset="utf-8" />
+  <title>Websocket application</title>
+  <script>
+      var websocket = new WebSocket("ws://localhost:8000");
+      websocket.onopen = function()
+      {
+        websocket.send("a message");
+        } 
+        
+        websocket.onclose = function()
+        {
+            alert ("Closing socket");
+        }
+        
+  </script>
+  <div id="output"></div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+document.getElementById("myCanvas").onclick = newColor;
+
+function newColor()
+{
+    var canvas = document.getElementById("myCanvas");
+    var item =canvas.getContext("2d");
+    item.fillStyle='#'+Math.floor(Math.random()*16777215).toString(16);
+    item.fillRect(0, 0, 300 ,150);
+    return false;
+}
+
+
+</script>
+
+click the box repeatedly
+
+</body>
+</html>
